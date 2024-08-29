@@ -30,7 +30,9 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api', voiceRoutes);
 app.use('/api', authRoutes);
-
+app.get('/', (req, res) => {
+    res.status(200).json({ "message": "Hello" });
+  });
 // Connect to the database and start the server
 connectDB();
 app.listen(port, () => {
