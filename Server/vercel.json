@@ -14,10 +14,6 @@
     {
       "src": "/",
       "dest": "index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "build/$1"
     }
   ]
 }
