@@ -13,7 +13,7 @@
       "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
     }
   ],
-  "REWRITES": [
-    { "SOURCE": "/(.*)", "DESTINATION": "/"}
+  "rewrite": [
+    { "src": "/(.*)", "dest": "/"}
   ]
 }
