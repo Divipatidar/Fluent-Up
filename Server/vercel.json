@@ -1,12 +1,11 @@
 {
-  "version":2,
-  "builds": [
-    { "src": "*.js", "use": "@vercel/node" }
-  ],
-  "routes": [
+  "github": {
+      "silent": true
+  },
+  "rewrites": [
       {
-        "src": "/(.*)",
-        "dest": "/"
+          "source": "(.*)",
+          "destination": "/index.html"
       }
   ]
 }
