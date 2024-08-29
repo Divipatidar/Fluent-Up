@@ -12,8 +12,6 @@
       "dest": "/",
       "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
     }
-  ],
-  "rewrite": [
-    { "src": "/(.*)", "dest": "/"}
   ]
+  
 }
