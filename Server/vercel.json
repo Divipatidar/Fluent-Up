@@ -5,5 +5,15 @@
       "src": "./server.js",
       "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+    }
+  ],
+  "REWRITES": [
+    { "SOURCE": "/(.*)", "DESTINATION": "/"}
   ]
 }
