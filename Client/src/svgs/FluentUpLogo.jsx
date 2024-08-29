@@ -1,0 +1,6 @@
+const FluentUpLogo = () => (
+    <svg width="100" height="50" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="35" font-family="Arial, sans-serif" font-size="35" fill="#333">FluentUp</text>
+    </svg>
+  );
+export default  FluentUpLogo 

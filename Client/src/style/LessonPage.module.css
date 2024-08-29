@@ -1,0 +1,99 @@
+/* LessonPage.module.css */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    font-style: italic;  /* Italicized text */
+    font-weight: 600;
+}
+
+.levelsWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.levelCard {
+    flex: 1 1 300px; /* Grow and shrink but at least 300px wide */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.levelCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.levelTitle {
+    font-size: 1.8em;
+    color: #4caf50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+    .heading {
+        font-size: 3em;
+    }
+
+    .levelTitle {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2em;
+    }
+
+    .levelTitle {
+        font-size: 1.6em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 360px) {
+    .heading {
+        font-size: 1.8em;
+    }
+
+    .levelCard {
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .levelTitle {
+        font-size: 1.4em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+}

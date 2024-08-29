@@ -1,0 +1,229 @@
+    html, body {
+        height: 100%; /* Full height for centering */
+        margin: 0; /* Remove default margins */
+        background-color: #f0f0f0; /* Main background color for the Home page */
+    }
+
+    .container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full width */
+        position: relative; /* Allows for absolute positioning of sidebar */
+    }
+
+    .content {
+        max-width: 600px; /* Limit the width of the content box */
+        width: 100%; /* Ensure the box doesn't exceed the max-width */
+        padding: 40px; /* Padding inside the content box */
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        text-align: center; /* Center text horizontally */
+        color: red; /* Default text color */
+        z-index: 1; /* Ensure content is above other elements */
+    }
+
+   
+
+    .sidebar {
+        width: 250px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+        z-index: 2; /* Ensure sidebar is above the content */
+    }
+
+    .sidebarOpen {
+        transform: translateX(0);
+
+    }
+    .sidebarOpen ~ .hamburgerContainer .hamburger span {
+        background-color: white;
+    }
+    html, body {
+        height: 100%; /* Full height for centering */
+        margin: 0; /* Remove default margins */
+        background-color: #f0f0f0; /* Main background color for the Home page */
+    }
+
+    .container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full width */
+        position: relative; /* Allows for absolute positioning of sidebar */
+    }
+
+    .content {
+        max-width: 600px; /* Limit the width of the content box */
+        width: 100%; /* Ensure the box doesn't exceed the max-width */
+        padding: 40px; /* Padding inside the content box */
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        text-align: center; /* Center text horizontally */
+        color: red; /* Default text color */
+        z-index: 1; /* Ensure content is above other elements */
+    }
+
+   
+
+    .sidebar {
+        width: 250px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+        z-index: 2; /* Ensure sidebar is above the content */
+    }
+
+    .sidebarOpen {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background: #333;
+    }
+            
+    /* Media queries for different screen sizes */
+
+/* Extra Small screens (360px and below) */
+@media (max-width: 360px) {
+    .sidebar {
+        width: 180px; /* Adjust width for very small screens */
+        left: -180px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 10px; /* Reduce padding for very small screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 200px; /* Adjust width for smaller screens */
+        left: -200px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 220px; /* Adjust width for tablets */
+        left: -220px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 30px; /* Adjust padding for tablets */
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 769px) {
+    .sidebar {
+        width: 250px; /* Default width for larger screens */
+        left: -250px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 40px; /* Default padding for larger screens */
+    }
+}
+
+            
+    /* Media queries for different screen sizes */
+
+/* Extra Small screens (360px and below) */
+@media (max-width: 360px) {
+    .sidebar {
+        width: 180px; /* Adjust width for very small screens */
+        left: -180px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 10px; /* Reduce padding for very small screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 200px; /* Adjust width for smaller screens */
+        left: -200px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 220px; /* Adjust width for tablets */
+        left: -220px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 30px; /* Adjust padding for tablets */
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 769px) {
+    .sidebar {
+        width: 250px; /* Default width for larger screens */
+        left: -250px; /* Start hidden off-screen */
+    }
+    .sidebarOpen {
+        left: 0; /* Slide in from the left */
+    }
+    .content {
+        padding: 40px; /* Default padding for larger screens */
+    }
+}

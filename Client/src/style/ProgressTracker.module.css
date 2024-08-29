@@ -1,0 +1,108 @@
+/* ProgressTracker.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.level {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.progressBarContainer {
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.progressBar {
+    height: 100%;
+    border-radius: 20px;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
+
+.progressText {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 500px;
+    }
+
+    .level {
+        font-size: 1.75em;
+    }
+
+    .progressText {
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 40px;
+        max-width: 600px;
+    }
+
+    .level {
+        font-size: 2em;
+    }
+
+    .progressText {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .level {
+        font-size: 1.3em;
+    }
+
+    .progressText {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .level {
+        font-size: 1.2em;
+    }
+
+    .progressText {
+        font-size: 0.8em;
+    }
+}

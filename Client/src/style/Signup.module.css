@@ -1,0 +1,244 @@
+.box {
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 420px;
+    margin: 20px auto;
+    background-color: #f9f9f9; /* Background color */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.container {
+    max-width: 100%; /* Ensure container width is responsive */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: red; /* Text color */
+    margin-top: 0.5px;
+    font-style: italic;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    position: relative;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+.welcome {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.inputWithIcon {
+    position: relative;
+    align-items: center;
+
+}
+
+.icon {
+    position: absolute;
+    left: 12px;
+    top: 70%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888; /* Icon color */
+    pointer-events: none; /* Ensures icon does not interfere with input */
+}
+
+.input {
+    width: 100%;
+    padding: 10px 10px 10px 45px; /* Adjust padding to account for icon */
+    font-size: 16px;
+    border: 1px solid #ccc; /* Input border color */
+    border-radius: 15px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.input:focus {
+    border-color: #cfcccc;
+    outline: none;
+}
+
+.togglePassword {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888; /* Toggle password icon color */
+}
+
+.button {
+    background-color: #e74c3c; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.animatedButton:hover {
+    background-color: #fff; /* Hover background color */
+    color: #e74c3c; /* Hover text color */
+    border: 2px solid #e74c3c; /* Hover border color */
+}
+
+.animatedButton:active {
+    background-color: #c0392b; /* Active background color */
+    color: #fff; /* Active text color */
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+    .togglePassword{
+        font-size: 20px;
+    }
+
+    .icon {
+        font-size: 20px; /* Larger icons on larger screens */
+    }
+    .container {
+        max-width: 600px;
+        padding: 2.5rem;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .input {
+        padding: 1rem 1rem 1rem 50px;
+        font-size: 1.125rem;
+    }
+
+    .button {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .togglePassword{
+        font-size: 18px;
+    }
+
+    .icon {
+        font-size: 18px; /* Adjusted icon size */
+    }
+    .container {
+        max-width: 500px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .input {
+        padding: 0.75rem 0.75rem 0.75rem 47px;
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .togglePassword{
+        font-size: 16px;
+    }
+
+    .icon {
+        font-size: 16px; /* Smaller icons on smaller screens */
+    }
+
+    .heading {
+        font-size: 1.75rem;
+    }
+
+    .input {
+        padding: 0.5rem 0.5rem 0.5rem 42px;
+        font-size: 0.875rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .togglePassword{
+        font-size: 14px;
+    }
+    .icon {
+        font-size: 14px; /* Further smaller icons */
+    }
+    .container {
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .input {
+        padding: 0.5rem 0.5rem 0.5rem 38px;
+        font-size: 0.75rem;
+    }
+
+    .button {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .icon {
+        font-size: 12px; /* Smallest icons on the smallest screens */
+    }
+    .container {
+        padding: 0.75rem;
+    }
+
+    .heading {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .input {
+        padding: 0.4rem 0.4rem 0.4rem 35px;
+        font-size: 0.65rem;
+    }
+
+    .button {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+    .togglePassword{
+        font-size: 12px;
+    }
+}

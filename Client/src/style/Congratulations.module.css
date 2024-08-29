@@ -1,0 +1,173 @@
+/* src/style/Congratulations.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #e7e6e2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.title {
+    font-size: 2em;
+    color: #1a1917;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #856404;
+    margin-bottom: 30px;
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.confetti div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    animation: confetti 5s infinite;
+}
+
+.confetti div:nth-child(2) {
+    background-color: #f7cac9;
+    animation-delay: 1s;
+}
+
+.confetti div:nth-child(3) {
+    background-color: #92a8d1;
+    animation-delay: 2s;
+}
+
+.confetti div:nth-child(4) {
+    background-color: #88b04b;
+    animation-delay: 3s;
+}
+
+.confetti div:nth-child(5) {
+    background-color: #6b5b95;
+    animation-delay: 4s;
+}
+
+.resetButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resetButton:hover {
+    background-color: #131212;
+}
+
+/* Media queries for responsiveness */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 70%; /* Adjust width for larger screens */
+    }
+
+    .title {
+        font-size: 2.5em; /* Larger title font */
+    }
+
+    .message {
+        font-size: 1.5em; /* Larger message font */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 80%; /* Adjust width for medium screens */
+    }
+
+    .title {
+        font-size: 2.2em; /* Slightly larger title font */
+    }
+
+    .message {
+        font-size: 1.4em; /* Slightly larger message font */
+    }
+}
+
+/* Small devices (phones, 480px and up) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 90%; /* Adjust width for small screens */
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    .title {
+        font-size: 1.8em; /* Smaller title font */
+    }
+
+    .message {
+        font-size: 1.2em; /* Smaller message font */
+    }
+
+    .resetButton {
+        font-size: 1em; /* Smaller button font */
+        padding: 8px 16px; /* Adjust padding for smaller buttons */
+    }
+}
+
+/* Extra small devices (phones, less than 480px) */
+@media (max-width: 479px) {
+    .container {
+        width: 95%; /* Adjust width for extra small screens */
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .title {
+        font-size: 1.6em; /* Smaller title font */
+    }
+
+    .message {
+        font-size: 1em; /* Smaller message font */
+    }
+
+    .resetButton {
+        font-size: 0.9em; /* Smaller button font */
+        padding: 6px 12px; /* Adjust padding for extra small buttons */
+    }
+}

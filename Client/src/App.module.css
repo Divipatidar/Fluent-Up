@@ -1,0 +1,103 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* App.module.css */
+
+.light {
+  background-color: #f0f0f0;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  background-color: #181818;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #444;
+  padding: 15px; /* Increased padding for larger size */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.toggle:active {
+  background-color: #666;
+}
+
+.toggle svg {
+  color: #fff;
+  transition: color 0.3s ease;
+  font-size: 1.5em; /* Increased font size for larger icon */
+}
+
+.light .toggle {
+  background-color: #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light .toggle:hover {
+  background-color: #ccc;
+}
+
+.light .toggle:active {
+  background-color: #bbb;
+}
+
+.light .toggle svg {
+  color: #000;
+}
