@@ -18,7 +18,7 @@ const ProgressTracker = ({ userId }) => {
 
         const fetchUserProgress = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/progress/${userId}`);
+                const response = await axios.get(`https://fluent-up-backend.vercel.app/api/progress/${userId}`);
                 const { progress, level } = response.data;
                 setProgress(progress);
                 setLevel(level);

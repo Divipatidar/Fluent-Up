@@ -9,7 +9,7 @@ const Congratulations = ({ userId }) => {
 
     const resetProgress = async () => {
         try {
-            await axios.post(`http://localhost:5000/api/reset/${userId}`);
+            await axios.post(`https://fluent-up-backend.vercel.app/api/reset/${userId}`);
             navigate('/'); // Redirect to the Home page after resetting
         } catch (error) {
             console.error('Error resetting progress:', error);

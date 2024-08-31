@@ -32,7 +32,7 @@ const Home = ({ userId, firstName, setUser }) => {
 
     const handleLogout = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/logout', {}, {
+            const response = await axios.post('https://fluent-up-backend.vercel.app/api/logout', {}, {
                 withCredentials: true
             });
 

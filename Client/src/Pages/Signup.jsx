@@ -25,7 +25,7 @@ const Signup = ({ setUser }) => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/signup', {
+            const response = await axios.post('https://fluent-up-backend.vercel.app/api/signup', {
                 firstName,
                 lastName,
                 email,

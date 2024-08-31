@@ -54,7 +54,7 @@ const VoiceHandler = ({ userId, isRecording, onStartRecording, onStopRecording }
 
     const getAIResponse = async (userId, inputText) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/process-voice', { userId, transcript: inputText });
+            const response = await axios.post('https://fluent-up-backend.vercel.app/api/process-voice', { userId, transcript: inputText });
             return response.data.response;
         } catch (error) {
             console.error('Error getting AI response:', error);
